@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.fundo {
+  text-align: center;
+  position: fixed;
+  background-image: linear-gradient(
+    0deg,
+    rgb(0, 0, 0),
+    rgb(114, 10, 18),
+    white
+  );
+  height: 100vh;
+  width: 201vh;
+  color: white;
+  margin: 0;
+  font-family: arial, Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.calculadora {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.61);
+  border: white;
+  border-width: 1px;
+  border-style: groove;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+tr,
+td {
+  background: rgba(255, 255, 255, 0.733);
+  border-radius: 10px;
+}
+
+.botoes,
+.botoes_actions {
+  background: rgba(77, 24, 24, 0.959);
+  color: rgba(255, 255, 255, 0.925);
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 2px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.botoes:hover,
+.botoes_actions:hover {
+  background-color: rgb(33, 66, 61);
+}
+
+#boxEnd {
+  line-height: 80px;
+  width: 200px;
+  opacity: 0;
+  margin: 100px auto;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+  background: white;
+  top: 70%;
+  opacity: 80%;
+  position: relative;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+#resultado {
+  border: 1px groove white;
+  font-size: 25px;
+  width: 200px;
+  background: white;
+  color: black;
+  text-align: right;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  border-radius: 5px;
+  word-break: break-word;
+  animation: fadeIn 2000ms ease-in-out;
+}
+
+table {
+  background: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    background: black;
+    opacity: 30%;
+    color: white;
+  }
+  100% {
+    background: white;
+    opacity: 90%;
+    color: black;
+  }
+}
+
+label {
+  text-align: center;
+  opacity: 70%;
+}
