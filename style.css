@@ -1,94 +1,74 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Times New Roman", Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .fundo {
+  z-index: 1;
   text-align: center;
   position: fixed;
-  background-image: linear-gradient(
-    0deg,
-    rgb(0, 0, 0),
-    rgb(114, 10, 18),
-    white
-  );
-  height: 100vh;
-  width: 201vh;
+  background: #d4c9be;
+  height: 100%;
+  width: 100%;
   color: white;
   margin: 0;
-  font-family: arial, Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
 .calculadora {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.61);
-  border: white;
+  filter: blur(0.5px);
+  border: none;
   border-width: 1px;
-  border-style: groove;
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 5px;
-  padding: 20px;
+  border-radius: 20px;
 }
 
 tr,
 td {
-  background: rgba(255, 255, 255, 0.733);
-  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.185);
+  border-radius: 20px;
+  padding: 2px;
 }
 
 .botoes,
 .botoes_actions {
-  background: rgba(77, 24, 24, 0.959);
-  color: rgba(255, 255, 255, 0.925);
+  background: white;
   width: 50px;
   height: 50px;
   font-size: 20px;
   cursor: pointer;
-  margin: 2px;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 4px;
+  border: none;
 }
 
 .botoes:hover,
 .botoes_actions:hover {
-  background-color: rgb(33, 66, 61);
-}
-
-#boxEnd {
-  line-height: 80px;
-  width: 200px;
-  opacity: 0;
-  margin: 100px auto;
-  color: black;
-  text-align: center;
-  border-radius: 5px;
-  background: white;
-  top: 70%;
-  opacity: 80%;
-  position: relative;
-  animation: fadeIn 1s ease-in-out forwards;
+  background-color: rgb(46, 86, 136);
+  color: white;
 }
 
 #resultado {
-  border: 1px groove white;
-  font-size: 25px;
-  width: 200px;
-  background: white;
-  color: black;
-  text-align: right;
-  padding: 10px;
-  margin: 10px 0 20px 0;
+  width: 220px;
+  height: 40px;
   border-radius: 5px;
-  word-break: break-word;
-  animation: fadeIn 2000ms ease-in-out;
+  line-height: 40px;
+  font-size: 18pt;
+  margin: auto;
+  color: black;
+  border-radius: 20px 20px 0 0;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.63);
 }
-
 table {
-  background: none;
+  background: #030303;
+  border-radius: 0 0 20px 20px;
+  padding: 5px;
 }
 
 @keyframes fadeIn {
@@ -110,4 +90,76 @@ table {
 label {
   text-align: center;
   opacity: 70%;
+}
+
+.dark {
+  background-color: #123458;
+  color: white;
+}
+
+.dark .calculadora {
+  background-color: #123458;
+}
+
+.change:hover {
+  cursor: pointer;
+}
+
+ul,
+#listaHistorico {
+  padding: 10px;
+  border-radius: 20px;
+  background: whitesmoke;
+  color: black;
+  list-style: none;
+  width: 200px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+#overlayHistorico {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #123458;
+  color: #111;
+  z-index: 9999;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+#boxEnd {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+#fecharHistorico {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 0 20px;
+  color: white;
+}
+
+#toggleHistorico {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #123458;
+  color: white;
+}
+.bnt {
+  margin: 30px auto;
+}
+
+#toggleHistorico:hover {
+  cursor: pointer;
 }
